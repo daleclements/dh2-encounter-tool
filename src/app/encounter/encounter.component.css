@@ -1,0 +1,47 @@
+#actions-bar {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template-areas: 
+        "add rnd nxt";
+}
+
+#add-participant-button {
+    grid-area: add;
+}
+
+#round-container {
+    grid-area: rnd;
+
+    display: grid;
+    grid-template: auto auto / 1fr;
+    justify-items: center;
+}
+
+#round-label {
+
+}
+
+#round-value {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#next-turn-button {
+    grid-area: nxt;
+}
+
+#next-turn-icon {
+}
+
+mat-list-item.participant-container {
+    padding: 10px 0px;
+    height: auto;
+}
+
+app-participant-card {
+    cursor: pointer;
+}
+
+.active {
+    outline: 1px solid red;
+}

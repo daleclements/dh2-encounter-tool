@@ -1,0 +1,93 @@
+mat-form-field {
+    width: 100%;
+}
+
+#grid {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    grid-template-areas: 
+        "name"
+        "hp"
+        "ammo"
+        "statuses";
+        /* "init"; */
+    align-items: center;
+    justify-items: center;
+}
+
+#name-field {
+    grid-area: name;
+}
+
+#hp-container {
+    grid-area: hp;
+    display: grid;
+
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template-areas:
+        "sub fld add";
+
+    justify-items: center;
+    align-items: center;
+}
+
+#hp-sub {
+    grid-area: sub;
+}
+
+#hp-add {
+    grid-area: add;
+}
+
+#hp-field {
+    grid-area: fld;
+    text-align: center;
+    width: 7em;
+}
+
+#hp-input {
+    grid-area: inp;
+    font-size: 5em;
+    text-align: center;
+}
+
+#ammo-container {
+    grid-area: ammo;
+    display: grid;
+
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template-areas:
+        "sub fld add";
+
+    justify-items: center;
+    align-items: center;
+}
+
+#ammo-sub {
+    grid-area: sub;
+}
+
+#ammo-add {
+    grid-area: add;
+}
+
+#ammo-field {
+    grid-area: fld;
+    text-align: center;
+    width: 5em;
+}
+
+#ammo-input {
+    grid-area: inp;
+    font-size: 3em;
+    width: 1.5em;
+    text-align: center;
+}
+
+#statuses-container {
+    grid-area: statuses;
+}
+
+/* #initiative-field {
+    grid-area: init;
+} */

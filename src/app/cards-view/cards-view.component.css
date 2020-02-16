@@ -1,0 +1,6 @@
+#encounter-container {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    padding-top: 16px;
+}

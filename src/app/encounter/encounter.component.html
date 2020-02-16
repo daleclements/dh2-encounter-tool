@@ -1,0 +1,24 @@
+<div id="actions-bar">
+  <button id="add-participant-button" mat-raised-button (click)="addParticipant()">Add Participant</button>
+  <div id="round-container">
+    <span id="round-label">Round</span>
+    <span id="round-value">{{round}}</span>
+  </div>
+  <button id="next-turn-button" mat-raised-button (click)="nextTurn()" color="primary">
+    Next Turn <mat-icon id="next-turn-icon">arrow_right</mat-icon>
+  </button>
+</div>
+
+<mat-list>
+  <mat-list-item class="participant-container" *ngFor="let p of participants">
+    <app-participant-card
+      [(name)]="p.name"
+      [(hp)]="p.hp"
+      [(ammo)]="p.ammo"
+      [ammoMax]="p.ammoMax"
+      [initiative]="p.initiative"
+      (click)="editParticipant(p)"
+      [class.active]="p == activeParticipant">
+    </app-participant-card>
+  </mat-list-item>
+</mat-list>

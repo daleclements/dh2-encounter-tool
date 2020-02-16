@@ -1,0 +1,26 @@
+<!--The ripple has to be here in the template because if it's added to the component tag instead the card styles get messed up -->
+<mat-card id="card-container" matRipple>
+  <!-- Name -->
+  <span class="stat-container">
+    <mat-icon aria-label="Name">{{icons.name}}</mat-icon> 
+    <span id="name-value">{{name}}</span>
+  </span>
+
+  <!-- HP -->
+  <span class="stat-container">
+    <mat-icon class="hp-icon" aria-label="HP">{{icons.hp}}</mat-icon>
+    <span id="hp-value">{{hp}}</span>
+  </span>
+  
+  <!-- Ammo -->
+  <span class="stat-container">
+    <mat-icon aria-label="Ammo">{{icons.ammo}}</mat-icon> 
+    <span>{{ammo}}</span>
+  </span>
+  
+  <!-- Initiative -->
+  <span class="stat-container">
+    <mat-icon aria-label="Initiative">{{icons.initiative}}</mat-icon> 
+    <span>{{initiative}}</span>
+  </span>
+</mat-card>

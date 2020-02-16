@@ -1,0 +1,48 @@
+<form #participantForm (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+      <div id="grid">
+          <mat-form-field id="name-field">
+              <mat-label><mat-icon>{{icons.name}}</mat-icon> Name </mat-label>
+              <input matInput name="name" placeholder="Name" [(ngModel)]="tempParticipant.name">
+            </mat-form-field>
+            
+            <div id="hp-container">
+              <button id="hp-sub" mat-fab (click)="decrementHP($event)">
+                <mat-icon aria-label="remove 1 hp">{{icons.minus}}</mat-icon>
+              </button>
+              <mat-form-field id="hp-field">
+                <mat-label><mat-icon>{{icons.hp}}</mat-icon> HP </mat-label>
+                <input id="hp-input" matInput name="hp" placeholder="HP" [(ngModel)]="tempParticipant.hp">
+              </mat-form-field>
+              <button id="hp-add" mat-fab (click)="incrementHP($event)">
+                  <mat-icon aria-label="add 1 hp">{{icons.plus}}</mat-icon>
+                </button>
+            </div>
+            
+            <div id="ammo-container">
+              <button id="ammo-sub" mat-mini-fab (click)="decrementAmmo($event)">
+                <mat-icon aria-label="remove 1 ammo">{{icons.minus}}</mat-icon>
+              </button>
+              <mat-form-field id="ammo-field">
+                  <mat-label><mat-icon>{{icons.ammo}}</mat-icon> Ammo </mat-label>
+                  <input id="ammo-input" matInput name="ammo" placeholder="Ammo" [(ngModel)]="tempParticipant.ammo">
+              </mat-form-field>
+              <button id="ammo-add" mat-mini-fab (click)="incrementAmmo($event)">
+                <mat-icon aria-label="add 1 ammo">{{icons.plus}}</mat-icon>
+              </button>
+            </div>
+
+            <div id="statuses-container">
+              statuses
+            </div>
+            
+            <!-- <mat-form-field id="initiative-field">
+              <mat-label><mat-icon>{{icons.initiative}}</mat-icon> Initiative </mat-label>
+              <input matInput name="initiative" placeholder="Initiative" [(ngModel)]="participant.initiative">
+            </mat-form-field> -->
+      </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+      <button mat-raised-button (click)="cancel()">Cancel</button>
+  </mat-dialog-actions>
+</form>

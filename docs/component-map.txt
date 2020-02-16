@@ -1,0 +1,18 @@
+encounter:
+    * list of participants
+    * tracks turn, rounds
+    * add and remove participants
+
+encounter-participant-card
+    * HP
+    * Initiative
+    * Ammo
+    * Status effects
+
+encounter-participant-detail
+    * 
+
+
+
+encounter (list of)
+    character
