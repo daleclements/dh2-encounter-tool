@@ -27,7 +27,30 @@ export class Participant {
         this.name = randomName;
     }
 
-    public copy() {
+    public static deserialize(partJson: string): Participant {
+        try {
+            let target = new Participant();
+            let source = JSON.parse(partJson);
+            Object.keys(target).forEach(key => {
+                switch(key) {
+                    case "statuses":
+                        let statuses = new Array<Status>();
+                        //TODO: Deserialize statuses
+                        target.statuses = statuses;
+                        break;
+                    default:
+                        target[key] = source[key];
+                        break;
+                }
+            });
+            return target;
+        } catch (e) {
+            console.error("Failed to deserialize Participant", e);
+            return null;
+        }
+    }
+
+    public copy(): Participant {
         let copy = new Participant();
         copy.name = this.name;
         copy.hp = this.hp;

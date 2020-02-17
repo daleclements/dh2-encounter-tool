@@ -1,0 +1,11 @@
+<div *ngIf="PCs$ | async as PCs; else loading">
+    <div id="actions-bar">
+        <button id="add-participant-button" mat-raised-button (click)="addParticipant()">Add PC</button>
+    </div>
+
+    <app-participant-list [participants]="PCs" (participantsChange)="onParticipantsChange($event)"></app-participant-list>
+</div>
+
+<ng-template #loading>
+    Loading...
+</ng-template>

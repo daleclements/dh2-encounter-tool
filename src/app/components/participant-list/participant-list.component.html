@@ -1,0 +1,12 @@
+<mat-list>
+    <mat-list-item class="participant-container" *ngFor="let p of participants">
+        <app-participant-card
+            [(name)]="p.name"
+            [(hp)]="p.hp"
+            [(ammo)]="p.ammo"
+            [ammoMax]="p.ammoMax"
+            [initiative]="p.initiative"
+            (click)="editParticipant(p)">
+        </app-participant-card>
+    </mat-list-item>
+</mat-list>

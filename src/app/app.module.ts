@@ -29,6 +29,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { CardsViewComponent } from './cards-view/cards-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
 import { InfoViewComponent } from './info-view/info-view.component';
+import { PlayerCharacterViewComponent } from './views/player-character-view/player-character-view.component';
+import { ParticipantListComponent } from './components/participant-list/participant-list.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { InfoViewComponent } from './info-view/info-view.component';
     NavigationBarComponent,
     CardsViewComponent,
     TableViewComponent,
-    InfoViewComponent
+    InfoViewComponent,
+    PlayerCharacterViewComponent,
+    ParticipantListComponent
   ],
   imports: [
     BrowserModule,
