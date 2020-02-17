@@ -25,7 +25,7 @@ import { ParticipantEditorDialogComponent } from './participant-editor-dialog/pa
 import { EncounterTableComponent } from './encounter-table/encounter-table.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { CardsViewComponent } from './cards-view/cards-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
 import { InfoViewComponent } from './info-view/info-view.component';
